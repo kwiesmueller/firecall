@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: firecall
+  labels:
+    component: firecall
+  annotations:
+    kubernetes.io/ingress.class: "traefik"
+spec:
+  rules:
+  - host: firecall.lab.seibert-media.net
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: firecall
+          servicePort: 80
