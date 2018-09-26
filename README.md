@@ -12,8 +12,8 @@ My solution was to build this simple service for playing the middleman with Fire
 
 This service offers two endpoints:
 
-* `/register`: which accepts the devices messaging token (only using those for now) and thn returns your api key
-* `/dial/{number}`: which takes the number to dial as stated in the path and a Authorization Header containing the api key.
+* `/dial/register`: which accepts the devices messaging token (only using those for now) and thn returns your api key
+* `/dial/call/{number}`: which takes the number to dial as stated in the path and a Authorization Header containing the api key.
 
 ## Development
 

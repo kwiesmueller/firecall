@@ -1,0 +1,25 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "go_default_library",
+    srcs = [
+        "auth.go",
+        "auth_std.go",
+        "token_generator.go",
+        "token_verifier.go",
+        "user_mgt.go",
+    ],
+    importmap = "github.com/kwiesmueller/firecall/vendor/firebase.google.com/go/auth",
+    importpath = "firebase.google.com/go/auth",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//vendor/firebase.google.com/go/internal:go_default_library",
+        "//vendor/golang.org/x/net/context:go_default_library",
+        "//vendor/golang.org/x/net/context/ctxhttp:go_default_library",
+        "//vendor/google.golang.org/api/googleapi:go_default_library",
+        "//vendor/google.golang.org/api/identitytoolkit/v3:go_default_library",
+        "//vendor/google.golang.org/api/iterator:go_default_library",
+        "//vendor/google.golang.org/api/option:go_default_library",
+        "//vendor/google.golang.org/api/transport:go_default_library",
+    ],
+)

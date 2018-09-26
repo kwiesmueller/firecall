@@ -11,6 +11,7 @@ export REPO		:= kwiesmueller
 export GIT_HOST	:= github.com
 export REGISTRY	?= eu.gcr.io
 export PROJECT		?= kwiesmueller-development
+export RBE_PROJECT		?= smedia-events
 
 export PATH 		:= $(GOPATH)/bin:$(PATH)
 export BAZEL_PYTHON=python2.7

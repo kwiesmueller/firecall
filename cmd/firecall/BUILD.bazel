@@ -12,8 +12,17 @@ go_library(
     importpath = "github.com/kwiesmueller/firecall/cmd/firecall",
     visibility = ["//visibility:private"],
     deps = [
+        "//vendor/bitbucket.org/seibert-media/events/pkg/api:go_default_library",
         "//vendor/bitbucket.org/seibert-media/events/pkg/service:go_default_library",
+        "//vendor/firebase.google.com/go:go_default_library",
+        "//vendor/firebase.google.com/go/messaging:go_default_library",
+        "//vendor/github.com/dgraph-io/badger:go_default_library",
+        "//vendor/github.com/go-chi/chi:go_default_library",
+        "//vendor/github.com/google/uuid:go_default_library",
+        "//vendor/github.com/pkg/errors:go_default_library",
         "//vendor/github.com/seibert-media/golibs/log:go_default_library",
+        "//vendor/go.uber.org/zap:go_default_library",
+        "//vendor/google.golang.org/api/option:go_default_library",
     ],
 )
 

@@ -1,0 +1,17 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "go_default_library",
+    srcs = [
+        "messaging.go",
+        "messaging_utils.go",
+    ],
+    importmap = "github.com/kwiesmueller/firecall/vendor/firebase.google.com/go/messaging",
+    importpath = "firebase.google.com/go/messaging",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//vendor/firebase.google.com/go/internal:go_default_library",
+        "//vendor/golang.org/x/net/context:go_default_library",
+        "//vendor/google.golang.org/api/transport:go_default_library",
+    ],
+)
